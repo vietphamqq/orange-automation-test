@@ -1,0 +1,31 @@
+{
+  "name": "orange-automation-test",
+  "version": "1.0.0",
+  "description": "E2E Test Automation Framework with Playwright for the OrangeHRM application",
+  "author": "Viet Pham",
+  "copyright": "Copyright © 2025 Viet Pham",
+  "scripts": {
+    "build": "tsc",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:api-tests": "playwright test --project=api",
+    "test:ui-tests": "playwright test tests/ui",
+    "test:regression": "playwright test --grep @regression",
+    "test:smoke": "playwright test --grep @smoke",
+    "report": "playwright show-report",
+    "test:chrome": "playwright test --project=chromium --headed",
+    "test:firefox": "playwright test --project=firefox --headed"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^22.14.1",
+    "allure-playwright": "^2.9.2",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "prettier": "^3.1.0",
+    "typescript": "^5.5.3"
+  },
+  "private": true
+}
