@@ -11,7 +11,11 @@ Copyright © 2025 Viet Pham
    ```
    npm install
    ```
-3. Copy `.env.local.example` to `.env.local` and update as needed:
+3. Install Playwright browsers:
+   ```
+   npx playwright install
+   ```
+4. Copy `.env.local.example` to `.env.local` and update as needed:
    ```
    cp .env.local.example .env.local
    ```
