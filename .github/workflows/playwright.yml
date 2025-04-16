@@ -7,6 +7,17 @@ on:
     branches: [ main ]
   workflow_dispatch:  # Allows manual triggering
 
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
   test:
     name: 'Playwright Tests'
@@ -25,7 +36,7 @@ jobs:
           # Disable cache since we don't have a lock file
           
       - name: Install dependencies
-        run: npm install
+        run: npm nstallinstall
         
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
@@ -54,6 +65,9 @@ jobs:
     needs: test
     runs-on: ubuntu-latest
     if: always()
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     
     steps:
       - name: Download Playwright Report
