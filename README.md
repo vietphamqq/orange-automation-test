@@ -79,7 +79,7 @@ npm run test:regression
 ```
 
 
-For more details on test tagging, see [TEST-TAGS.md](TEST-TAGS.md).
+For more details on test tagging, see [Tags Test](https://playwright.dev/docs/test-annotations#tag-tests).
 
 ## Logging
 
@@ -123,7 +123,6 @@ brew install allure
   - `api/` - API tests
   - Tests are tagged as `@smoke`, `@regression`, or `@api` for easy filtering
 - `utils/` - Utility functions
-- `TEST-TAGS.md` - Documentation for test tagging
 
 ## Configuration
 
