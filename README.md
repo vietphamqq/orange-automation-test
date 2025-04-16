@@ -112,6 +112,35 @@ Note: You need to have Allure installed. If you don't have it, you can install i
 brew install allure
 ```
 
+## Continuous Integration
+
+This project uses GitHub Actions for continuous integration. The workflow automatically runs tests on:
+- Every push to the main branch
+- Every pull request targeting the main branch
+- Manual triggers via GitHub Actions UI
+
+### CI Workflow Features
+
+- Runs all Playwright tests on Ubuntu with Node.js 20
+- Generates and publishes HTML test reports
+- Collects Allure test results
+- Publishes test reports to GitHub Pages for easy viewing
+
+### Viewing Test Reports
+
+After a workflow run completes:
+1. Go to the GitHub Actions tab in the repository
+2. Select the completed workflow run
+3. View the "Artifacts" section to download raw reports
+4. For the published HTML report, click on the deployment link in the "Publish Test Report" job
+
+### Manual Trigger
+
+To manually trigger the test workflow:
+1. Go to the Actions tab in the repository
+2. Select the "Playwright Tests" workflow
+3. Click "Run workflow" and select the branch to run against
+
 
 ## Project Structure
 
