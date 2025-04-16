@@ -10,3 +10,5 @@ yarn-error.log*
 /test-results
 /allure-results
 .vscode/*
+/playwright-report/*
+/playwright-report
