@@ -36,7 +36,7 @@ jobs:
           # Disable cache since we don't have a lock file
           
       - name: Install dependencies
-        run: npm nstallinstall
+        run: npm install
         
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
