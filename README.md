@@ -148,14 +148,18 @@ To manually trigger the test workflow:
 
 ## Project Structure
 
-- `actions/` - Reusable test actions
-- `components/` - Page components (e.g., navigation, forms)
-- `pages/` - Page objects
+- `actions/` - Reusable test actions (e.g., authentication flows)
+- `components/` - Page components (e.g., navigation, search forms)
+- `fixtures/` - Test fixtures and setup files
+  - `ui-test.ts` - Base fixture for UI tests
+  - `api-test.ts` - Base fixture for API tests
+- `pages/` - Page objects implementing the Page Object Model pattern
 - `tests/` - Test files
-  - `ui/` - UI tests
-  - `api/` - API tests
-  - Tests are tagged as `@smoke`, `@regression`, or `@api` for easy filtering
-- `utils/` - Utility functions
+  - `ui/` - UI tests for web interface
+  - `api/` - API tests for backend services
+  - `performance/` - Performance testing scripts
+  - Tests are tagged as `@smoke`, `@regression` for easy filtering
+- `utils/` - Utility functions and helpers (logging, API authentication)
 
 ## Configuration
 
